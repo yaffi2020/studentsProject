@@ -1,0 +1,25 @@
+<p *ngIf="!studentsList"><em>the list is empty</em></p>
+
+<input type="text" [(ngModel)]="resultSearch" placeholder="enter id/name to search"
+(keyup)="search(resultSearch)" />
+
+<p>results for searching: {{resultSearch}}</p>
+
+<table class='table' aria-labelledby="tableLabel" *ngIf="studentsList">
+  <thead>
+    <tr>
+      <th class="id">id</th>
+      <th class="tz">tz</th>
+      <th class="name">name</th>
+      <th class="gender">gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of studentsList">
+      <td class="id">{{s.id}}</td>
+      <td class="tz"><a [routerLink]="['/students',s.id]">{{s.tz}}</a></td>
+      <td class="name">{{ s.firstName }} {{ s.lastName }}</td>
+      <td class="gender">{{ s.gender }}</td>
+    </tr>
+  </tbody>
+</table>

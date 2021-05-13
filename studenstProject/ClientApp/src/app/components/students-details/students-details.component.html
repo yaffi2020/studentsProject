@@ -1,0 +1,23 @@
+<p>hello to student Id: {{studentId}}</p>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="studentList">
+    <thead>
+        <tr>
+            <th class="id">id</th>
+            <th class="tz">tz</th>
+            <th class="name">name</th>
+            <th class="birthDay">birthDay</th>
+            <th class="gender">gender</th>
+            <th class="dateOfRegistration">dateOfRegistration</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of studentList|mySearchById:studentId">
+            <td class="id">{{s.id}}</td>
+            <td class="tz">{{s.tz}}</td>
+            <td class="name">{{s.firstName }} {{ s.lastName }}</td>
+            <td class="birthDay">{{s.birthDay }}</td>
+            <td class="gender">{{s.gender }}</td>
+            <td class="dateOfRegistration">{{s.dateOfRegistration }}</td>
+        </tr>
+    </tbody>
+</table>

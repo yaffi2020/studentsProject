@@ -1,0 +1,19 @@
+.id{
+    color: crimson;
+}
+.tz{
+    color: rgb(41, 110, 212);
+    
+}
+.name{
+    color: goldenrod;
+}
+.birthDay{
+    color: orangered;
+}
+.gender{
+    color: olivedrab;
+}
+.dateOfRegistration{
+    color: teal;
+}
